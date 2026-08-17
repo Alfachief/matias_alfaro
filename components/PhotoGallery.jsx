@@ -25,6 +25,7 @@ export default function PhotoGallery() {
         }}
       >
         Fotos
+        
       </h2>
  <a
           href="/"

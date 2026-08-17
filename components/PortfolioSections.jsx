@@ -1,12 +1,6 @@
 import React from "react";
 
-/**
- * Secciones del portafolio — Matías Alfaro
- * Paleta: carbón cálido + ámbar "luz de cuarto oscuro"
- * Tipografía: Fraunces (display) + IBM Plex Mono (labels/metadata) + Inter (cuerpo)
- * Firma visual: divisores tipo "hoja de contactos" (contact sheet) con
- * agujeros de sprocket, como una tira de negativos de 35mm.
- */
+
 
 const FONT_IMPORT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&display=swap');`;
 
@@ -192,7 +186,7 @@ export default function PortfolioSections() {
 
       <ContactSheetDivider frame="04" />
 
-      {/* ---------- VERSÍCULO ---------- */}
+      
       <section className="px-6 md:px-16 py-24 max-w-3xl mx-auto text-center">
         <p
           className="text-xs tracking-[0.35em] uppercase mb-8"
