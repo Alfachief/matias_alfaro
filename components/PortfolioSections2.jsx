@@ -1,13 +1,5 @@
 import React from "react";
 
-/**
- * Secciones del portafolio — Matías Alfaro
- * Paleta: carbón cálido + ámbar "luz de cuarto oscuro"
- * Tipografía: Fraunces (display) + IBM Plex Mono (labels/metadata) + Inter (cuerpo)
- * Firma visual: divisores tipo "hoja de contactos" (contact sheet) con
- * agujeros de sprocket, como una tira de negativos de 35mm.
- */
-
 const FONT_IMPORT = `@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&display=swap');`;
 
 function InstagramIcon(props) {
@@ -49,80 +41,49 @@ export default function PortfolioSections() {
         >
           Rollo 01 — Presentación
         </p>
+        <h2
+          className="leading-[0.95] mb-8"
+          style={{
+            fontFamily: "'Fraunces', serif",
+            fontWeight: 500,
+            fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
+          }}
+        >
+          ¿Quién soy?
+        </h2>
+        <p className="max-w-2xl text-lg md:text-xl leading-relaxed mb-10" style={{ color: "#D8D3C7" }}>
+          Me presento, soy{" "}
+          <span style={{ fontFamily: "'Fraunces', serif", fontStyle: "italic", color: "#F3EFE7" }}>
+            Matías Alfaro
+          </span>
+          , tengo 24 años y trabajo detrás y delante de cámara en cada etapa de una producción visual.
+        </p>
 
-        <div className="grid md:grid-cols-[minmax(0,280px)_1fr] gap-10 md:gap-14 items-start">
-          {/* Foto de perfil, estilo cuadro de negativo */}
-          <div className="relative w-full max-w-[280px]">
-            <div
-              className="relative overflow-hidden"
-              style={{ border: "1px solid rgba(217,164,65,0.5)", padding: 8 }}
-            >
-              <img
-                src="/perfil.jpg"
-                alt="Matías Alfaro"
-                className="w-full aspect-[4/5] object-cover"
-              />
-            </div>
-            <span
-              className="absolute -bottom-3 left-2 px-2"
-              style={{
-                fontFamily: "'IBM Plex Mono', monospace",
-                fontSize: "0.65rem",
-                color: "#D9A441",
-                background: "#141210",
-              }}
-            >
-              FRAME 00
-            </span>
-          </div>
-
-          {/* Texto */}
-          <div>
-            <h2
-              className="leading-[0.95] mb-8"
-              style={{
-                fontFamily: "'Fraunces', serif",
-                fontWeight: 500,
-                fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
-              }}
-            >
-              ¿Quién soy?
-            </h2>
-            <p className="max-w-2xl text-lg md:text-xl leading-relaxed mb-10" style={{ color: "#D8D3C7" }}>
-              Me presento, soy{" "}
-              <span style={{ fontFamily: "'Fraunces', serif", fontStyle: "italic", color: "#F3EFE7" }}>
-                Matías Alfaro
-              </span>
-              , tengo 24 años y trabajo detrás y delante de cámara en cada etapa de una producción visual.
-            </p>
-
-            {/* Tira de roles estilo "hoja de contactos" */}
-            <div
-              className="flex flex-wrap gap-0 border-t border-b"
-              style={{ borderColor: "rgba(217,164,65,0.35)" }}
-            >
-              {["Diseñador", "Fotógrafo", "Camarógrafo", "Montajista", "Postproductor", "Fiel"].map(
-                (rol, i) => (
-                  <div
-                    key={rol}
-                    className="flex items-center gap-3 py-4 pr-8 border-r last:border-r-0"
-                    style={{ borderColor: "rgba(217,164,65,0.2)" }}
-                  >
-                    <span
-                      style={{
-                        fontFamily: "'IBM Plex Mono', monospace",
-                        fontSize: "0.7rem",
-                        color: "#D9A441",
-                      }}
-                    >
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <span className="text-sm md:text-base">{rol}</span>
-                  </div>
-                )
-              )}
-            </div>
-          </div>
+        {/* Tira de roles estilo "hoja de contactos" */}
+        <div
+          className="flex flex-wrap gap-0 border-t border-b"
+          style={{ borderColor: "rgba(217,164,65,0.35)" }}
+        >
+          {["Diseñador", "Fotógrafo", "Camarógrafo", "Montajista", "Postproductor", "Fiel"].map(
+            (rol, i) => (
+              <div
+                key={rol}
+                className="flex items-center gap-3 py-4 pr-8 border-r last:border-r-0"
+                style={{ borderColor: "rgba(217,164,65,0.2)" }}
+              >
+                <span
+                  style={{
+                    fontFamily: "'IBM Plex Mono', monospace",
+                    fontSize: "0.7rem",
+                    color: "#D9A441",
+                  }}
+                >
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="text-sm md:text-base">{rol}</span>
+              </div>
+            )
+          )}
         </div>
       </section>
 
