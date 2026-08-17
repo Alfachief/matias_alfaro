@@ -6,5 +6,4 @@ export default function ProduccionesPage() {
       <ProductionsGallery />
     </div>
   );
-  
 }
